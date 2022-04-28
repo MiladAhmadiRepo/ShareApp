@@ -94,6 +94,6 @@ Topics :
 
 45- dart Extension methods
 
-46- Key and key usage
+46- Key and global key usage
 
 47- theme and theme data

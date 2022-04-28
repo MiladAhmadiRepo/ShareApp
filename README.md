@@ -30,7 +30,7 @@ Topics :
 
 13- inherit widget
 
-14- go router ((navigator2))
+14- navigator2 ((go_router))
 
 15- database hive
 

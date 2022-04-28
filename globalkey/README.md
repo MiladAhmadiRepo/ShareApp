@@ -1,4 +1,7 @@
 
+ # GlobaKey
+
+ 
  کاربرد global key
 
   در مواردی که در کلاس پدر به کلاس فرزندی که statefull

@@ -25,7 +25,7 @@ class MyRouter {
       GoRoute(
         //اسم گذاری روت با نام root
         name: rootRouteName,
-        //ادرس  دهی روت home
+        //ادرس  دهی روت root
         path: '/',
         redirect: (state) =>
             // برو به صفحه home با پارامتر ورودی
@@ -49,7 +49,7 @@ class MyRouter {
         name: createAccountRouteName,
         //ادرس  دهی روت create-account
         path: '/create-account',
-        // صفحه create account رو بساز
+        // صفحه create-account رو بساز
         pageBuilder: (context, state) => MaterialPage<void>(
           key: state.pageKey,
           child: const CreateAccount(),
@@ -71,6 +71,9 @@ class MyRouter {
             child: HomeScreen(tab: tab),
           );
         },
+        //در داخل ویجت home
+        //زیر مجموعه ای از ویجت ها با ادرسهای داخلی home
+        //ساخته میشود
         routes: [
           GoRoute(
             //اسم گذاری روت با نام shop-details

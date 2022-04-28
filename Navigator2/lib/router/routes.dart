@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import '../ui/create_account.dart';
@@ -23,11 +22,10 @@ class MyRouter {
     debugLogDiagnostics: true,
     urlPathStrategy: UrlPathStrategy.path,
     routes: [
-
       GoRoute(
-        //اسم گذاری روت با نام روت
+        //اسم گذاری روت با نام root
         name: rootRouteName,
-        //ادرس  دهی روت اصلی
+        //ادرس  دهی روت home
         path: '/',
         redirect: (state) =>
             // برو به صفحه home با پارامتر ورودی
@@ -36,9 +34,9 @@ class MyRouter {
             state.namedLocation(homeRouteName, params: {'tab': 'shop'}),
       ),
       GoRoute(
-        //اسم گذاری روت با نام لاگین روت
-      name: loginRouteName,
-        //ادرس  دهی روت لاگین
+        //اسم گذاری روت با نام لاگین login
+        name: loginRouteName,
+        //ادرس  دهی روت login
         path: '/login',
         // صفحه لاگین رو بساز
         pageBuilder: (context, state) => MaterialPage<void>(
@@ -47,26 +45,26 @@ class MyRouter {
         ),
       ),
       GoRoute(
-        //اسم گذاری روت با نام ساخت حساب
-      name: createAccountRouteName,
-        //ادرس  دهی روت ساخت حساب
+        //اسم گذاری روت با نام create-account
+        name: createAccountRouteName,
+        //ادرس  دهی روت create-account
         path: '/create-account',
-        // صفحه ساخت حساب رو بساز
+        // صفحه create account رو بساز
         pageBuilder: (context, state) => MaterialPage<void>(
           key: state.pageKey,
           child: const CreateAccount(),
         ),
       ),
       GoRoute(
-        //اسم گذاری روت با نام صفحه ابتدایی
-      name: homeRouteName,
-        //ادرس  دهی روت با نام صفحه ابتدایی
+        //اسم گذاری روت با نام home
+        name: homeRouteName,
+        //ادرس  دهی روت با نام home
         //که پارامتر ورودی tab میتونه یکی از
         //مقادیرshop|cart|profile داشته باشد
         path: '/home/:tab(shop|cart|profile)',
         pageBuilder: (context, state) {
           final tab = state.params['tab']!;
-          // صفحه ابتدایی رو بساز
+          // صفحه home رو بساز
           // با مقداری که از tab میاد
           return MaterialPage<void>(
             key: state.pageKey,
@@ -75,40 +73,58 @@ class MyRouter {
         },
         routes: [
           GoRoute(
+            //اسم گذاری روت با نام shop-details
             name: subDetailsRouteName,
+            //ادرس  دهی روت  shop-details
+            // با پارامتر وردی item
             path: 'details/:item',
+            // صفحه shop-details رو بساز
+            // با مقداری که از item میاد
             pageBuilder: (context, state) => MaterialPage<void>(
               key: state.pageKey,
               child: Details(description: state.params['item']!),
             ),
           ),
           GoRoute(
+            //اسم گذاری روت با نام profile-personal
             name: profilePersonalRouteName,
+            //ادرس  دهی روت profile-personal
             path: 'personal',
+            // صفحه profile-personal رو بساز
+            //بدون پارامتر ورودی
             pageBuilder: (context, state) => MaterialPage<void>(
               key: state.pageKey,
               child: const PersonalInfo(),
             ),
           ),
           GoRoute(
+            //اسم گذاری روت با نام profile-payment
             name: profilePaymentRouteName,
+            //ادرس  دهی روت profile-payment
             path: 'payment',
+            // صفحه profile-payment رو بساز
             pageBuilder: (context, state) => MaterialPage<void>(
               key: state.pageKey,
               child: const Payment(),
             ),
           ),
           GoRoute(
+            //اسم گذاری روت با نام profile-signin
             name: profileSigninInfoRouteName,
+            //ادرس  دهی روت profile-signin
             path: 'signin-info',
+            // صفحه profile-signin رو بساز
             pageBuilder: (context, state) => MaterialPage<void>(
               key: state.pageKey,
               child: const SigninInfo(),
             ),
           ),
           GoRoute(
+            //اسم گذاری روت با نام profile-moreInfo
             name: profileMoreInfoRouteName,
+            //ادرس  دهی روت profile-moreInfo
             path: 'more-info',
+            // صفحه profile-moreInfo رو بساز
             pageBuilder: (context, state) => MaterialPage<void>(
               key: state.pageKey,
               child: const MoreInfo(),
@@ -120,6 +136,7 @@ class MyRouter {
       //اگه این ادرس رو صدا زدیم میریم به ادرس home
       GoRoute(
         //ادرس  دهی روت بدون نام
+        //ادرس  دهی روت shop
         path: '/shop',
         redirect: (state) =>
             // برو به صفحه home با پارامتر
@@ -128,18 +145,26 @@ class MyRouter {
       ),
       GoRoute(
         path: '/cart',
-        redirect: (state) =>
-            state.namedLocation(homeRouteName, params: {'tab': 'cart'}),
+        // برو به صفحه home با پارامتر
+        // ورودی tab و لا مقدار cart
+        redirect: (state) => state.namedLocation(homeRouteName, params: {'tab': 'cart'}),
       ),
       GoRoute(
+        //ادرس  دهی روت profile
         path: '/profile',
-        redirect: (state) =>
-            state.namedLocation(homeRouteName, params: {'tab': 'profile'}),
+        // برو به صفحه home با پارامتر
+        // ورودی tab و لا مقدار profile
+        redirect: (state) => state.namedLocation(homeRouteName, params: {'tab': 'profile'}),
       ),
       GoRoute(
-        //اسم گذاری روت با نامdetails
+        //اسم گذاری روت با تام details
         name: detailsRouteName,
+        //ادرس  دهی روت details
+        //با پارامتر ورودی item
         path: '/details-redirector/:item',
+        // برو به صفحه shop-details با پارامتر
+        // ورودی tab و با مقدار shop
+        //همچنین ورودی item و با مقدار که پاس داده میشود
         redirect: (state) => state.namedLocation(
           subDetailsRouteName,
           params: {'tab': 'shop', 'item': state.params['item']!},
@@ -148,7 +173,10 @@ class MyRouter {
       GoRoute(
         //اسم گذاری روت با نام personal
         name: personalRouteName,
+        //ادرس  دهی روت personal
         path: '/profile-personal',
+        // برو به صفحه profile-personal با پارامتر
+        // ورودی tab و با مقدار profile
         redirect: (state) => state.namedLocation(
           profilePersonalRouteName,
           params: {'tab': 'profile'},
@@ -157,16 +185,22 @@ class MyRouter {
       GoRoute(
         //اسم گذاری روت با نام payment
         name: paymentRouteName,
+        //ادرس  دهی روت payment
         path: '/profile-payment',
+        // برو به صفحه profile-payment با پارامتر
+        // ورودی tab و با مقدار profile
         redirect: (state) => state.namedLocation(
           profilePaymentRouteName,
           params: {'tab': 'profile'},
         ),
       ),
       GoRoute(
-        //اسم گذاری روت با نام signinInfo
+        //اسم گذاری روت با نام signin
         name: signinInfoRouteName,
+        //ادرس  دهی روت signin
         path: '/profile-signin-info',
+        // برو به صفحه profile-signin با پارامتر
+        // ورودی tab و با مقدار profile
         redirect: (state) => state.namedLocation(
           profileSigninInfoRouteName,
           params: {'tab': 'profile'},
@@ -174,8 +208,11 @@ class MyRouter {
       ),
       GoRoute(
         //اسم گذاری روت با نام moreInfo
-      name: moreInfoRouteName,
+        name: moreInfoRouteName,
+        //ادرس  دهی روت moreInfo
         path: '/profile-more-info',
+        // برو به صفحه profile-moreInfo با پارامتر
+        // ورودی tab و با مقدار profile
         redirect: (state) => state.namedLocation(
           profileMoreInfoRouteName,
           params: {'tab': 'profile'},

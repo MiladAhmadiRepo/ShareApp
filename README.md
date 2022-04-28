@@ -1,7 +1,10 @@
 Topics :
 1- Widgets type
+
 2- stateLess and BuildContext
+
 3- stateFull ((setState))
+
 4- create widget
 5- Hot reload and Hot restart
 6- Container and Column and Row

@@ -1,16 +1,13 @@
 # provider_stream
 
-A new Flutter project.
-
 ## Getting Started
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+- [provider](https://flutter.dev/docs/get-started/codelab)
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+###Read
+مورد استفاده از read به این شکل است که
+به provider گفته میشود یه snapshop از خودت بگیر و یک
+کاری رو انجام بده
+از read برای expecting یا تغییر یک متغییر که میخواهد ui رو اپدیت کند استفاده نکنید
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.

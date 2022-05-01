@@ -1,7 +1,7 @@
 # Responsive Steps :
 ## install this library
 ```html
-https://pub.dev/packages/responsive_framework
+flutter pub add responsive_framework
 ```
 
 ## add breakpoint to Material App

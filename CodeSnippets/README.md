@@ -1,106 +1,58 @@
 
-# These projects are gifts for Flutter devlopers .
+# Code Snippets
 
 # ----------------------------------- 
 
-## Topics
+In Android Studio go to Settings (Preferences on Mac) > Editor > Live Templates.
 
-1- Widgets type
+Expand the Flutter option. You should see some live templates already defined. To create a new one click the + add button on the right and choose Live templates.
 
-2- stateLess and BuildContext
+https://i.stack.imgur.com/f13zE.png
 
-3- stateFull ((setState))
+Add an abreviation that you can use in code. Also write a description. Then paste in the code that you want to auto insert.
 
-4- create widget
 
-5- Hot reload and Hot restart
+#Finally, where it says "Define" choose Dart and flutter from the list. Then choose OK.
 
-6- Container and Column and Row
+https://i.stack.imgur.com/TdQnF.png
 
-7- custom Font and images
+If there are any variable names that you want to fill in later you can surround them with $ signs like $NAME$.
+ 
 
-8- Http and Dio
+#Example
 
-9- json serialize
+Whenever I want to test some widget, I make a new app with a clean layout, none of those comments and extra widgets. Here is a live template that is just a basic starting layout.
 
-10- freeze
+I called the abbreviation basiclayout and the code is
 
-11-Creating a responsive Flutter app
+```dart
+import 'package:flutter/material.dart';
 
-11-1- AspectRatio , FittedBox
+void main() => runApp(MyApp());
 
-11-2- FractionallySizedBox and LayoutBuilder and MediaQuery and OrientationBuilder
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'My App',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: Scaffold(
+        appBar: AppBar(title: Text('My App')),
+        body: BodyWidget(),
+      ),
+    );
+  }
+}
 
-12- screen utile
+class BodyWidget extends StatelessWidget {
 
-13- inherit widget
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+}
+```
 
-14- [Navigator2 ((go_router))](https://github.com/ShowAppStructure/ShareApp/tree/master/Navigator2)
-
-15- database hive
-
-16- database sqflite
-
-17- flutter Channel
-
-18- dev Tools
-
-19- contraint widget
-
-20- unit test 
-
-21- widget test 
-
-22- integrate test 
-
-23- deep linking
-
-24- multi language
-
-25- create package and plugin 
-
-26- back ground thread or isolate 
-
-27- provider 
-
-28- bloc
-
-29- firebase auth 
-
-30- firebase push notification
-
-31- firebase analytic
-
-32- animation implicit
-
-33- animation explicit
-
-34- scaffold material and Cupertino widgets
-
-35-Staggered animations and Hero animations
-
-36- slivers 
-
-37- play store release
-
-38- app store release
-
-39- null safety
-
-40- future and stream
-
-41- listview and singlechildscrollview
-
-42-dart and Classes and mixins
-
-43-constractor and multi constractor 
-
-44- Iterable collections and Filtering
-
-45- dart Extension methods
-
-46- Key and GlobalKey usage
-
-46-1- [Global key usage](https://github.com/ShowAppStructure/ShareApp/tree/master/globalkey)
-
-47- theme and theme data
+Now I can just start typing basiclayout to get all that code inserted automatically. I could have replaced the My App string or the BodyWidget name with a $NAME$ variable if I wanted to choose a new name every time.

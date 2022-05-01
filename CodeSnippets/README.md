@@ -9,6 +9,9 @@ Expand the Flutter option. You should see some live templates already defined. T
 
 https://i.stack.imgur.com/f13zE.png
 
+<img src="https://i.stack.imgur.com/f13zE.png" alt="J"/>
+
+
 Add an abreviation that you can use in code. Also write a description. Then paste in the code that you want to auto insert.
 
 

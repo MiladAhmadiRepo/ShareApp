@@ -74,3 +74,4 @@ Provider.of<T>(this, listen: false);
 ```diff
 - ------------------------------------------------------------------------------------
 ```
+<p style='color:red'>This is some red text.</p>

@@ -98,9 +98,18 @@ Provider.of<T>(this, listen: false);
 
 - ---------------------------------------------------------------
 
+## موارد استفاده از provider.of
+
+اگر خارج از build function قرار دارید
+
+برای دسترسی به provider  از provider.of استفاده نمایید 
+
+- ---------------------------------------------------------------
 
 context.watch<T>(), which makes the widget listen to changes on T
+
 context.read<T>(), which returns T without listening to it
+
 context.select<T, R>(R cb(T value)), which allows a widget to listen to only a small part of T
 
 ```diff

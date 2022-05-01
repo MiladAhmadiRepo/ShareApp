@@ -1,10 +1,10 @@
 # provider_stream
 ```diff
-- text in red
-+ text in green
-! text in orange
-# text in gray
-@@ text in purple (and bold)@@
+- simple provider 
++ stream provider
+! any kind of provider
+# how to use them
+@@ and test them @@
 ```
 ## Getting Started
 
@@ -74,4 +74,4 @@ Provider.of<T>(this, listen: false);
 ```diff
 - ------------------------------------------------------------------------------------
 ```
-<p style='color:red'>This is some red text.</p>
+ 

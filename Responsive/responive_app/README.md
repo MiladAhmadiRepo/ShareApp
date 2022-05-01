@@ -1,5 +1,5 @@
 # Responsive Steps :
-### add breakpoint to Material App
+## add breakpoint to Material App
 
 ```dart
 return MaterialApp(
@@ -14,7 +14,7 @@ return MaterialApp(
   ),
 ```
 
-### uso one the below Tools
+## uso one of the below Tools =>
 
 #### column to row
 ```dart

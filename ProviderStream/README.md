@@ -6,7 +6,8 @@
 # how to use them
 @@ and test them @@
 ```
- 
+> **Note:** The **Synchronize now** button is disabled if you have no file to synchronize.
+
 ## Getting Started
 
 - [SimpleProvider](https://github.com/ShowAppStructure/ShareApp/tree/master/ProviderStream/lib/SimpleProvider)
@@ -14,7 +15,7 @@
 - [StreamProvider](https://github.com/ShowAppStructure/ShareApp/tree/master/ProviderStream/lib/StreamProvider)
 
 ```diff
-# --------------------------------------------------------------------------------------------------
+
 ```
 
 ## موارد استفاده از Read 
@@ -71,7 +72,6 @@ Provider.of<T>(this, listen: false);
 
 شده است پس به هر تغییری گوش میدهد
 
-> **Note:** The **Synchronize now** button is disabled if you have no file to synchronize.
 
 ```diff
 #

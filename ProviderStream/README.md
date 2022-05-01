@@ -1,5 +1,11 @@
 # provider_stream
-
+```diff
+- text in red
++ text in green
+! text in orange
+# text in gray
+@@ text in purple (and bold)@@
+```
 ## Getting Started
 
 
@@ -41,14 +47,9 @@ Provider.of<T>(this, listen: false);
 
 آن ui بروزرسانی شود 
 
-از selectاستفاده کنید 
-
+از selectاستفاده کنید
 ```diff
-- -------------------------------------
-+ text in green
-! text in orange
-# text in gray
-@@ text in purple (and bold)@@
+- ---------------------------------------------------------------
 ```
 همچنین نکته مهم از Select در تابع 
 
@@ -56,7 +57,11 @@ Provider.of<T>(this, listen: false);
 
 و آن را در ایتدایی ترین خط 
 
-متد build در stateless یا متد build در کلاس state موجود در stateful قرار دهید 
+متد build در stateless یا متد build در کلاس state موجود در stateful قرار دهید
+
+```diff
+- ---------------------------------------------------------------
+```
 
 اگر به داخل کد موجود در select مراجغه کنیم میبینیم که 
 

@@ -18,8 +18,8 @@ class HomeScreen extends StatelessWidget {
         child: SafeArea(
           child: FutureBuilder(
             future: personService.fetchPersons(10),
-            builder:
-                (BuildContext context, AsyncSnapshot<List<PersonModel>> snapshot) {
+
+            builder: (BuildContext context, AsyncSnapshot<List<PersonModel>> snapshot) {
               if (snapshot.hasData) {
                 return Row(
                   children: <Widget>[
@@ -48,7 +48,6 @@ class HomeScreen extends StatelessWidget {
                   ],
                 );
               }
-
               if (snapshot.hasError) {
                 return Center(
                     child: Icon(
@@ -57,7 +56,6 @@ class HomeScreen extends StatelessWidget {
                   size: 82.0,
                 ));
               }
-
               return Center(
                   child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,

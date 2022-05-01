@@ -8,7 +8,7 @@ class NameModel {
   String first;
   String last;
 
-  NameModel(this.title, this.first, this.last);
+  NameModel(this.title, this.first,this.last);
 
   @override
   String toString() => "$title $first $last";
@@ -17,4 +17,6 @@ class NameModel {
       _$NameModelFromJson(json);
 
   Map<String, dynamic> toJson() => _$NameModelToJson(this);
+
+
 }

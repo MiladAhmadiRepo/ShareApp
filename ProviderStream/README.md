@@ -8,14 +8,13 @@
 ```
 ## Getting Started
 
-
 - [SimpleProvider](https://github.com/ShowAppStructure/ShareApp/tree/master/ProviderStream/lib/SimpleProvider)
   
 - [StreamProvider](https://github.com/ShowAppStructure/ShareApp/tree/master/ProviderStream/lib/StreamProvider)
 
 ---------------------------------------------------------------------
 
-### موارد استفاده از Read 
+## موارد استفاده از Read 
 
 مورد استفاده از read به این شکل است که
 
@@ -43,7 +42,7 @@ Provider.of<T>(this, listen: false);
 - ------------------------------------------------------------------------------------
 ```
 
-### موارد استفاده از select
+## موارد استفاده از select
 
 اگر میخواهید به یک بخش خاص از provider 
 

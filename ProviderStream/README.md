@@ -41,7 +41,7 @@ Provider.of<T>(this, listen: false);
 اجرای یک اکشن یا تابع است
 
 ```diff
-# 
+ 
 ```
 
 ## موارد استفاده از select
@@ -64,17 +64,45 @@ Provider.of<T>(this, listen: false);
 
 متد build در stateless یا متد build در کلاس state موجود در stateful قرار دهید
 
+```diff
+
+```
+
+## موارد استفاده از watch
+
+اگر میخواهید به تغییرات provider
+
+نگاه شود و با تغییرات
+
+آن ui بروزرسانی شود
+
+از  watch استفاده کنید
+
 - ---------------------------------------------------------------
 
-اگر به داخل کد موجود در select مراجغه کنیم میبینیم که 
+اگر به داخل کد موجود در watch مراجغه کنیم میبینیم که
 
-از یک provider.of با مقدار پیش فرض listen  true ساخته 
+از یک provider.of با مقدار پیش فرض listen true ساخته
 
 شده است پس به هر تغییری گوش میدهد
 
+- ---------------------------------------------------------------
+
+همچنین نکته مهم از Select در تابع
+
+کلیک یا callback دکمه استفاده نکنید
+
+و آن را در ایتدایی ترین خط
+
+متد build در stateless یا متد build در کلاس state موجود در stateful قرار دهید
+
+- ---------------------------------------------------------------
+
+
+context.watch<T>(), which makes the widget listen to changes on T
+context.read<T>(), which returns T without listening to it
+context.select<T, R>(R cb(T value)), which allows a widget to listen to only a small part of T
 
 ```diff
-#
-```
- 
 
+```

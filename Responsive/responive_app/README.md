@@ -1,16 +1,80 @@
-# responive_app
+Responsive Steps :
+### add breakpoint to Material App
 
-A new Flutter project.
+```dart
+return MaterialApp(
+  builder: (context, widget) => ResponsiveWrapper.builder(
+    ClampingScrollWrapper.builder(context, widget!),
+    breakpoints: const [
+      ResponsiveBreakpoint.resize(350, name: MOBILE),
+      ResponsiveBreakpoint.autoScale(600, name: TABLET),
+      ResponsiveBreakpoint.resize(800, name: DESKTOP),
+      ResponsiveBreakpoint.autoScale(1700, name: 'XL'),
+    ],
+  ),
+```
 
-## Getting Started
+### uso one the below Tools
 
-This project is a starting point for a Flutter application.
+#### column to row
+```dart
+ResponsiveRowColumn(
+  rowMainAxisAlignment: MainAxisAlignment.center,
+  rowPadding: const EdgeInsets.all(30),
+  columnPadding: const EdgeInsets.all(30),
+  layout: ResponsiveWrapper.of(context).isSmallerThan(DESKTOP)
+      ? ResponsiveRowColumnType.COLUMN
+      : ResponsiveRowColumnType.ROW,
+  children: [
+    ResponsiveRowColumnItem(
+      rowFlex: 1,
+      child: CourseTile(course: courses[0]),
+    ),
+    ResponsiveRowColumnItem(
+      rowFlex: 1,
+      child: CourseTile(course: courses[1]),
+    ),
+  ],
+),
+```
 
-A few resources to get you started if this is your first Flutter project:
+#### responsive Value
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+```dart
+var responsiveValue = ResponsiveValue<double>(context, defaultValue: 350, valueWhen:[
+      const Condition.largerThan(
+        name: MOBILE,
+        value: 500,
+      ),
+    ]);
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+width: responsiveValue.value ?? 350,
+```
+
+#### Responsive visibility
+
+```dart
+leading: ResponsiveVisibility(
+  hiddenWhen: const [
+    Condition.largerThan(name: TABLET),
+  ],
+  child: IconButton(
+    onPressed: () {},
+    icon: const Icon(Icons.menu),
+  ),
+),
+```
+
+#### Responsive Conditions 
+
+```dart
+ if(ResponsiveWrapper.of(context).isLargerThan(MOBILE)){
+  
+ }
+```
+#### Responsive scaled Width Some time is SomeTimes Useful
+
+```dart
+ResponsiveWrapper.of(context).scaledWidth
+```
+

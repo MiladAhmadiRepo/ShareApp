@@ -3,7 +3,7 @@
 ## Getting Started
 
 
-- [provider](https://flutter.dev/docs/get-started/codelab)
+- [SimpleProvider](https://flutter.dev/docs/get-started/codelab)
 ###---------------------------------------------------------------
 
 ### موارد استفاده از Read 

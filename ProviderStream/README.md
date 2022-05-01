@@ -7,7 +7,7 @@
   
 - [StreamProvider](https://github.com/ShowAppStructure/ShareApp/tree/master/ProviderStream/lib/StreamProvider)
 
-###---------------------------------------------------------------
+---------------------------------------------------------------------
 
 ### موارد استفاده از Read 
 
@@ -31,7 +31,7 @@ Provider.of<T>(this, listen: false);
 
 اجرای یک اکشن یا تابع است
 
-###---------------------------------------------------------------
+--------------------------------------------------------------------
 
 ### موارد استفاده از select
 
@@ -43,10 +43,24 @@ Provider.of<T>(this, listen: false);
 
 از selectاستفاده کنید 
 
+```diff
+- text in red
++ text in green
+! text in orange
+# text in gray
+@@ text in purple (and bold)@@
+```
 همچنین نکته مهم از Select در تابع 
 
-کلیک یا function دکمه  استفاده نکنید 
+کلیک یا callback دکمه استفاده نکنید 
 
 و آن را در ایتدایی ترین خط 
 
-متد build خود قرار دهید 
+متد build در stateless یا متد build در کلاس state موجود در stateful قرار دهید 
+
+اگر به داخل کد موجود در select مراجغه کنیم میبینیم که 
+
+از یک provider.of با مقدار پیش فرض listen  true ساخته 
+
+شده است پس به هر تغییری گوش میدهد 
+

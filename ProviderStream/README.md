@@ -44,7 +44,7 @@ Provider.of<T>(this, listen: false);
 از selectاستفاده کنید 
 
 ```diff
-- text in red
+- -------------------------------------
 + text in green
 ! text in orange
 # text in gray

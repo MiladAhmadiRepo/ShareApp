@@ -104,3 +104,5 @@
 46-1- [Global key usage](https://github.com/ShowAppStructure/ShareApp/tree/master/globalkey)
 
 47- theme and theme data
+
+48-[code snippets](https://github.com/ShowAppStructure/ShareApp/blob/master/CodeSnippets/README.md)

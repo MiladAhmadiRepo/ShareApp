@@ -6,8 +6,7 @@
 # how to use them
 @@ and test them @@
 ```
-- ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=asdasda) 
-
+ 
 ## Getting Started
 
 - [SimpleProvider](https://github.com/ShowAppStructure/ShareApp/tree/master/ProviderStream/lib/SimpleProvider)
@@ -37,8 +36,6 @@ Provider.of<T>(this, listen: false);
 که نشان دهنده این است که به تغییرات گوش نمیدهد و فقط برای
 
 اجرای یک اکشن یا تابع است
-
---------------------------------------------------------------------
 
 ```diff
 - ------------------------------------------------------------------------------------

@@ -7,8 +7,6 @@ In Android Studio go to Settings (Preferences on Mac) > Editor > Live Templates.
 
 Expand the Flutter option. You should see some live templates already defined. To create a new one click the + add button on the right and choose Live templates.
 
-https://i.stack.imgur.com/f13zE.png
-
 <img src="https://i.stack.imgur.com/f13zE.png" alt="J"/>
 
 
@@ -17,7 +15,9 @@ Add an abreviation that you can use in code. Also write a description. Then past
 
 #Finally, where it says "Define" choose Dart and flutter from the list. Then choose OK.
 
-https://i.stack.imgur.com/TdQnF.png
+
+<img src="https://i.stack.imgur.com/TdQnF.png" alt="J"/>
+
 
 If there are any variable names that you want to fill in later you can surround them with $ signs like $NAME$.
  

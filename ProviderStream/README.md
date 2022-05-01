@@ -3,7 +3,10 @@
 ## Getting Started
 
 
-- [SimpleProvider](https://flutter.dev/docs/get-started/codelab)
+- [SimpleProvider](https://github.com/ShowAppStructure/ShareApp/tree/master/ProviderStream/lib/SimpleProvider)
+  
+- [StreamProvider](https://github.com/ShowAppStructure/ShareApp/tree/master/ProviderStream/lib/StreamProvider)
+
 ###---------------------------------------------------------------
 
 ### موارد استفاده از Read 

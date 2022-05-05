@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:provider_stream/WatchAndSelectProvider/provider/object_provider.dart';
-import 'package:provider_stream/WatchAndSelectProvider/widget/cheap_widget.dart';
-import 'package:provider_stream/WatchAndSelectProvider/widget/expensive_widget.dart';
-import 'package:provider_stream/WatchAndSelectProvider/widget/provider_object_widget.dart';
+import 'package:provider_stream/WatchAndSelectProvider/widgets/cheap_widget.dart';
+import 'package:provider_stream/WatchAndSelectProvider/widgets/expensive_widget.dart';
+import 'package:provider_stream/WatchAndSelectProvider/widgets/provider_object_widget.dart';
 
 void main() {
   runApp(const MyApp());

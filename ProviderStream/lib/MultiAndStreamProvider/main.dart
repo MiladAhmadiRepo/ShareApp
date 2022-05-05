@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:provider_stream/MultiAndProxyProvider/model/minutes.dart';
-import 'package:provider_stream/MultiAndProxyProvider/model/seconds.dart';
-import 'package:provider_stream/MultiAndProxyProvider/widgets/minutes_widget.dart';
-import 'package:provider_stream/MultiAndProxyProvider/widgets/seconds_widget.dart';
+import 'package:provider_stream/MultiAndStreamProvider/model/minutes.dart';
+import 'package:provider_stream/MultiAndStreamProvider/model/seconds.dart';
+import 'package:provider_stream/MultiAndStreamProvider/widgets/minutes_widget.dart';
+import 'package:provider_stream/MultiAndStreamProvider/widgets/seconds_widget.dart';
 
 void main() {
   runApp(const MyApp());

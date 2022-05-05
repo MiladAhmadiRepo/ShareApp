@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:provider_stream/MultiAndProxyProvider/model/seconds.dart';
-import 'package:provider_stream/WatchAndSelectProvider/model/cheap_obeject.dart';
-import 'package:provider_stream/WatchAndSelectProvider/model/expensive_object.dart';
-import 'package:provider_stream/WatchAndSelectProvider/provider/object_provider.dart';
+import 'package:provider_stream/MultiAndStreamProvider/model/seconds.dart';
 
 class SecondsWidget extends StatelessWidget {
   const SecondsWidget({Key? key}) : super(key: key);

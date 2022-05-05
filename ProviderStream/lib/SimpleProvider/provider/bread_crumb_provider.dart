@@ -5,7 +5,7 @@ import 'package:provider_stream/SimpleProvider/model/model.dart';
 
 class BreadCrumbProvider extends ChangeNotifier{
   final List<BreadCrumb> _items=[];
-  UnmodifiableListView<BreadCrumb>get item=>UnmodifiableListView(_items);
+  UnmodifiableListView<BreadCrumb>get items=>UnmodifiableListView(_items);
   void add (BreadCrumb item)
   {
     for (var listItem in _items) {

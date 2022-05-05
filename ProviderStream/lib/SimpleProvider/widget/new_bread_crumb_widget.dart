@@ -4,8 +4,11 @@ import 'package:provider_stream/SimpleProvider/model/model.dart';
 import '../provider/bread_crumb_provider.dart';
 
 class NewBreadCrumbWidget extends StatelessWidget {
-  NewBreadCrumbWidget({Key? key}) : super(key: key);
   late TextEditingController _controller;
+
+  NewBreadCrumbWidget({Key? key}) : super(key: key){
+    _controller=TextEditingController();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -1,8 +1,5 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:provider_stream/SimpleProvider/model/model.dart';
 import 'package:provider_stream/SimpleProvider/provider/bread_crumb_provider.dart';
 import 'package:provider_stream/SimpleProvider/widget/bread_crumb_widget.dart';
 import 'package:provider_stream/SimpleProvider/widget/new_bread_crumb_widget.dart';
@@ -24,7 +21,9 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        routes: {'/new': (context) => NewBreadCrumbWidget()},
+        home: MyHomePage(title: "bread crumbs"),
+        routes: {
+          '/new': (context) => NewBreadCrumbWidget()},
       ),
     );
   }
@@ -47,6 +46,9 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         body: Column(
           children: [
+            Consumer<BreadCrumbProvider>(builder:(context, value, child) {
+              return BreadCrumbWidget(breadCrumbs: value.items);
+            },),
             TextButton(
                 onPressed: () {
                   Navigator.of(context).pushNamed('/new');

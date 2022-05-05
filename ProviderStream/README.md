@@ -12,7 +12,7 @@
 
 - [SimpleProvider](https://github.com/ShowAppStructure/ShareApp/tree/master/ProviderStream/lib/SimpleProvider)
   
-- [StreamProvider](https://github.com/ShowAppStructure/ShareApp/tree/master/ProviderStream/lib/StreamProvider)
+- [WatchAndSelectProvider](https://github.com/ShowAppStructure/ShareApp/tree/master/ProviderStream/lib/StreamProvider)
 
 ```diff
 

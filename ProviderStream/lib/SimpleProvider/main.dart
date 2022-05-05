@@ -5,6 +5,7 @@ import 'package:provider/provider.dart';
 import 'package:provider_stream/SimpleProvider/model/model.dart';
 import 'package:provider_stream/SimpleProvider/provider/bread_crumb_provider.dart';
 import 'package:provider_stream/SimpleProvider/widget/bread_crumb_widget.dart';
+import 'package:provider_stream/SimpleProvider/widget/new_bread_crumb_widget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        routes: {'/new': (context) => const Material()},
+        routes: {'/new': (context) => NewBreadCrumbWidget()},
       ),
     );
   }

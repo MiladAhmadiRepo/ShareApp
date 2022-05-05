@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:provider_stream/SimpleProvider/model/model.dart';
+import 'package:provider_stream/SimpleProviderAndConsumer/model/model.dart';
 import '../provider/bread_crumb_provider.dart';
 
 class NewBreadCrumbWidget extends StatelessWidget {

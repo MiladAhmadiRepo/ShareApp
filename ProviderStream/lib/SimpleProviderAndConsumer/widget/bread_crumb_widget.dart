@@ -1,7 +1,7 @@
 import 'dart:collection';
 
 import 'package:flutter/material.dart';
-import 'package:provider_stream/SimpleProvider/model/model.dart';
+import 'package:provider_stream/SimpleProviderAndConsumer/model/model.dart';
 
 class BreadCrumbWidget extends StatelessWidget {
   final UnmodifiableListView<BreadCrumb> breadCrumbs;

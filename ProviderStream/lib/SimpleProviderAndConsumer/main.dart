@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:provider_stream/SimpleProvider/provider/bread_crumb_provider.dart';
-import 'package:provider_stream/SimpleProvider/widget/bread_crumb_widget.dart';
-import 'package:provider_stream/SimpleProvider/widget/new_bread_crumb_widget.dart';
+import 'package:provider_stream/SimpleProviderAndConsumer/provider/bread_crumb_provider.dart';
+import 'package:provider_stream/SimpleProviderAndConsumer/widget/bread_crumb_widget.dart';
+import 'package:provider_stream/SimpleProviderAndConsumer/widget/new_bread_crumb_widget.dart';
 
 void main() {
   runApp(const MyApp());

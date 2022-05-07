@@ -7,7 +7,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:testing/image_page.dart';
+import 'package:testing/second_page.dart';
 
 import 'package:testing/main.dart';
 
@@ -54,7 +54,7 @@ void main() {
     await tester.pumpAndSettle();
 
     // in the new page
-    expect(find.byType(ImagePage), findsOneWidget,reason: "we should find new page");
+    expect(find.byType(SecondPage), findsOneWidget,reason: "we should find new page");
     expect(find.byType(MyHomePage), findsNothing,reason: "we should find new page");
 
   });

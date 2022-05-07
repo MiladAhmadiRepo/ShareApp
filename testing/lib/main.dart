@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:testing/image_page.dart';
+import 'package:testing/second_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -37,7 +37,7 @@ class _MyHomePageState extends State<MyHomePage> {
       _counter++;
       if(_counter > 2){
         Navigator.push(context, MaterialPageRoute (
-          builder: (BuildContext context) => const ImagePage(),
+          builder: (BuildContext context) => const SecondPage(),
         ),);
       }
     });

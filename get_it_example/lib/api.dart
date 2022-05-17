@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:get_it_example/model.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter/foundation.dart';
 
@@ -11,7 +12,7 @@ class Api {
   Future<String> getRandomJoke() async {
     try {
       final response = await client.get(
-        Uri.parse('https://official-joke-api.appspot.com/random_joke'),
+        Uri.parse('https://api.jokes.one/jod'),
         headers: {
           'Content-Type': 'application/json',
         },
@@ -19,7 +20,8 @@ class Api {
 
       if (response.statusCode == 200) {
         final joke = json.decode(response.body);
-        return 'HERE\'S THE JOKE\n${joke['setup']}\n${joke['punchline']}';
+        final model=Model.fromJson(joke);
+        return '${model.contents?.jokes?[0].joke?.text.toString()}';
       } else {
         return 'Something went wrong';
       }

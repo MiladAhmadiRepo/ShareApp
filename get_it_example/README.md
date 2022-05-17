@@ -62,11 +62,14 @@ Using get_it, classes can be registered in two ways.
 
 > **Factory**: With Factory registration, when you request an instance of the class from GetIt you'll 
 
+```diff
 get a new instance every time. Good for registering ViewModels that need to run the same logic 
 
 on start or that has to be new when the view is opened.
-
+```
 > **Singleton**: Singletons can be registered in two ways. 
+
+```diff
 
 Provide an Instance of the class upon registration (registerSingleton) 
 
@@ -82,7 +85,7 @@ Registering classes as LazySingletons helps with performance as the classes are 
 
 created when needed unlike registering as Singleton which creates 
 
-the classes when the app starts.
+the classes when the app starts.```
 ```diff
 -------------------------------------------------------------------------------
 ```

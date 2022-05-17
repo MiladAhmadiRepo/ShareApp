@@ -5,6 +5,7 @@ import 'api.dart';
 import 'injection.dart';
 
 void main() {
+  initGetIt();
   runApp(MyApp());
 }
 

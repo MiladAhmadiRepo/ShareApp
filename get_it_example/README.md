@@ -12,7 +12,7 @@ From the my example the Api class is dependent on the Client class
 
 and the most basic way to inject this dependency would be to pass it through the constructor
 
-```diff
+```dart
 class Api {
     Client client;
 
@@ -24,7 +24,7 @@ class Api {
 To Call HomeScreen somewhere in the codebase we would pass in the Api class it depends
 
 on and also pass in the Client class that the Api class depends on
-```diff
+```dart
 HomeScreen(api: Api(client: Client()));
 
 }
@@ -76,8 +76,99 @@ Registering classes as LazySingletons helps with performance as the classes are 
 created when needed unlike registering as Singleton which creates 
 
 the classes when the app starts.
+```diff
+-------------------------------------------------------------------------------
+```
+First create a file named injection.dart under the lib folder.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+This is where we would register our Dart classes.
+
+For our joke app the only Dart class we would need to register is 
+
+the Api class and its dependency (the Client class). 
+
+To do this we call sl.registerLazySingleton(() {});
+
+```dart
+sl.registerLazySingleton<Api>(() => Api(client: sl()));
+
+sl.registerLazySingleton<Client>(() => Client());
+
+```
+
+What's going on is we register a LazySingleton of Type Api which returns 
+
+an instance of our Api class when its needed. The Api class also depends on 
+
+the client class and we simply call sl() in its place. This tells the service 
+
+locator to find a registered instance of Type Client which we've also registered.
+
+The complete injection.dart file
+
+```dart
+ 
+import 'package:example/api.dart';
+import 'package:get_it/get_it.dart';
+import 'package:http/http.dart';
+
+final sl = GetIt.instance;
+
+void initGetIt() {
+  sl.registerLazySingleton<Api>(() => Api(client: sl()));
+
+  sl.registerLazySingleton<Client>(() => Client());
+}
+
+```
+
+## Using The Service Locator
+
+To make use of the service locator we have to initialize it by running
+
+the initGetIt method before runApp in main.dart
+
+```dart
+void main() {
+  initGetIt();
+  runApp(MyApp());
+}
+
+```
+
+And the MyApp class which formerly looked like this
+
+```dart
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      ///...
+      home: MyHomePage(api: Api(client: http.Client())),
+    );
+  }
+}
+
+```
+
+Becomes this
+
+```dart
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      //...
+      home: MyHomePage(api: sl<Api>()),
+    );
+  }
+}
+
+```
+So that's basically it. The more an app grows the more services like Get_it
+
+would be required. Especially when following clean architecture and writing test
+
+as there would be a lot of dependency injections going on in the codebase.
 
  

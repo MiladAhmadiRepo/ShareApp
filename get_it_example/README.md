@@ -31,11 +31,18 @@ HomeScreen(api: Api(client: Client()));
 
 ```
 
+``` diff 
+
 I'm sure we can see how things can easily get out of hand when we try to access classes 
 
 with multiple dependencies across multiple places in the codebase.
 
-This is where Get_it comes in. With Get_it we simply register our Dart classes/Objects 
+This is where Get_it comes in. 
+
+```
+
+
+With Get_it we simply register our Dart classes/Objects 
 
 and the classes they depend on, which can then be easily accessed from anywhere.
 
@@ -90,6 +97,7 @@ the Api class and its dependency (the Client class).
 To do this we call sl.registerLazySingleton(() {});
 
 ```dart
+
 sl.registerLazySingleton<Api>(() => Api(client: sl()));
 
 sl.registerLazySingleton<Client>(() => Client());

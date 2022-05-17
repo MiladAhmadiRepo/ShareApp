@@ -106,3 +106,6 @@
 47- theme and theme data
 
 48-[code snippets](https://github.com/ShowAppStructure/ShareApp/blob/master/CodeSnippets/README.md)
+
+49-[Dependency Injection Using Get_It](https://github.com/ShowAppStructure/ShareApp/tree/master/get_it_example/README.md)
+

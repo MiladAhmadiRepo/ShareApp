@@ -85,10 +85,11 @@ Registering classes as LazySingletons helps with performance as the classes are 
 
 created when needed unlike registering as Singleton which creates 
 
-the classes when the app starts.```
-```diff
--------------------------------------------------------------------------------
+the classes when the app starts.
 ```
+ 
+-------------------------------------------------------------------------------
+
 First create a file named injection.dart under the lib folder.
 
 This is where we would register our Dart classes.

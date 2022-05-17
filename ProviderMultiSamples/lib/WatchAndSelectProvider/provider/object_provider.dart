@@ -4,6 +4,7 @@ import 'dart:typed_data';
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:provider_stream/WatchAndSelectProvider/model/base_object.dart';
 import 'package:provider_stream/WatchAndSelectProvider/model/cheap_obeject.dart';
 import 'package:provider_stream/WatchAndSelectProvider/model/expensive_object.dart';
 import 'package:uuid/uuid.dart';
@@ -35,6 +36,7 @@ class ObjectProvider extends ChangeNotifier {
   void start() {
     _streamSubscriptionCheapObject = Stream.periodic(Duration(seconds: 1)).listen((_) {
       _cheapObject = CheapObject();
+      callFunction(BaseObject());
       notifyListeners();
     });
     _streamSubscriptionExpensiveObject = Stream.periodic(Duration(seconds: 5)).listen((_) {
@@ -46,5 +48,10 @@ class ObjectProvider extends ChangeNotifier {
   void stop() {
     _streamSubscriptionExpensiveObject.cancel();
     _streamSubscriptionCheapObject.cancel();
+  }
+
+  void callFunction(CheapObject cheapObject)
+  {
+    String id =cheapObject.id;
   }
 }

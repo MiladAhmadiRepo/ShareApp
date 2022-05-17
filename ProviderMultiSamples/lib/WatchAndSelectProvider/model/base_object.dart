@@ -2,7 +2,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:uuid/uuid.dart';
 
-@immutable
+// @immutable
 class BaseObject{
   final String id;
   final String lastUpdated;

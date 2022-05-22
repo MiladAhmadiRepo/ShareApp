@@ -61,8 +61,8 @@
 
 26- back ground thread or isolate 
 
-27- provider 
-
+27- [provider](https://github.com/ShowAppStructure/ShareApp/tree/master/ProviderMultiSamples) 
+  
 28- bloc
 
 29- firebase auth 
@@ -79,7 +79,7 @@
 
 35-Staggered animations and Hero animations
 
-36- slivers 
+36- [slivers](https://github.com/ShowAppStructure/ShareApp/tree/master/customscrollview_sliverappbar) 
 
 37- play store release
 

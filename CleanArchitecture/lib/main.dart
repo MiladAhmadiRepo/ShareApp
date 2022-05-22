@@ -1,3 +1,5 @@
+import 'package:clean_architecture/src/config/routes/app_routes.dart';
+import 'package:clean_architecture/src/config/themes/app_theme.dart';
 import 'package:clean_architecture/src/core/utils/constants.dart';
 import 'package:flutter/material.dart';
 
@@ -14,8 +16,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: kMaterialAppTitle,
-      onGenerateRoute: AppRoutes,
-      theme: AppTheme
+      onGenerateRoute: AppRoutes.onGenerateRoutes,
+      theme: AppTheme.light
     );
   }
 }

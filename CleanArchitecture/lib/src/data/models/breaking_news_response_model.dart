@@ -9,6 +9,12 @@ class BreakingNewsResponseModel {
       {required this.status, required this.totalResults, required this.articles});
 
   factory BreakingNewsResponseModel.fromJson(Map<String, dynamic> json) {
+    if (json == null) {
+      return BreakingNewsResponseModel(
+          status: "",
+          totalResults: 0,
+          articles: []);
+    }
     return BreakingNewsResponseModel(
       status: json['status'] as String,
       totalResults: json['totalResults'] as int,
